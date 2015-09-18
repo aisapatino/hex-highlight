@@ -25,7 +25,7 @@ function! s:HexHighlight()
 
       if index(s:HexColors, hexMatch) == -1
         let fg = '#ffffff'
-        if str2nr(hexMatch, 16) > 7000000
+        if str2nr(hexMatch, 16) > 11000000
           let fg = '#333333'
         endif
 
@@ -67,9 +67,9 @@ function! s:ToggleHighlight()
     return
   endif
   if s:HexColored == 1
-    call ClearHexHighlight()
+    call s:ClearHexHighlight()
   else
-    call HexHighlight()
+    call s:HexHighlight()
   endif
 endfunction
 
