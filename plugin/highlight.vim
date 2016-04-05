@@ -47,7 +47,7 @@ function! s:Highlight()
         exe 'let m = matchadd("hexColor' . l:match_name . '", "' . match . '")'
 
         " mark color done
-        add(s:colors_found, match)
+        let s:colors_found = add(s:colors_found, match)
       endif
 
       let match_count += 1
